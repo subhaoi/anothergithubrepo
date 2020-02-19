@@ -1,56 +1,94 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<title>Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		* {
+			box-sizing :border-box;
+		}
+
+		.header {
+			padding: 60px;
+			text-align:center;
+			background: blue;
+			color: white;
+		}
+
+		.navbar {
+			display: flex;
+			background: grey;
+		}
+
+		.navbar a {
+			color:white;
+			padding: 14px 20px;
+			text-align: center;
+		}
+
+		.row{
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.side{
+			flex: 30%;
+			background-color: white;
+			padding: 20px;
+		}
+
+		.main{
+			flex:70%;
+			background-color: #D2E8F5;
+			padding: 20px;
+		}
+
+		.dummyimage{
+			background-color: #888888;
+			width:100%;
+			padding: 20px;
+		}
+
+		@media screen and (max-width: 700px){
+			.row, .navbar {
+				flex-direction: column;
+			}
+		}
+		</style>
+
 	</head>
-	<body>
-		<h2>Sign up</h2>
 
-		<form action="">
-			Enter first name <input name="firstname" type="text">
-			<br><br>
-			Enter last name <input name="lastname" type="text"> 
-			<br><br>
-			Enter email <input name="emailid" type="email"> 
-			<br><br>
-			Password <input type="password" name ="pass">
-			<br><br>
-			<input type="radio" name="gender" value="female"> Female
-			<input type="radio" name="gender" value="male"> Male
-			<br><br>
-			Do you know coding? <input type="checkbox" name="codingknowledge"> Yes
-			<br><br>
-			Do you know frontend? <input type="checkbox" name="frontendknowledge"> Yes
-			<br><br>
-			Select your favourite colour <input type="color" name="favcolor">
-			<br><br>
-			Enter your birthday <input type="date" name="birthday">
-			<br><br>
-			Upload resume <input type="file" name="uploadedfile">
-			<br><br>
+	<div class="header">
+		<h1>Website</h1>
+		<p>responsive in nature</p> 
+	</div>
 
-			<div class="dropdown">
-				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Select
-				</button>
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a class="dropdown-item" href="#">Action</a>
-					<a class="dropdown-item" href="#">Another action</a>
-					<a class="dropdown-item" href="#">Something else here</a>
-				</div>
-			</div>
+	<div class="navbar">
+		<a>Link1</a>
+		<a>Link2</a>
+		<a>Link3</a>
+		<a>Link4</a>
+	</div>
 
-			<input type="submit">
+	<div class="row">
+		<div class="side">
+			<h2>Info</h2>
+			<h5>Photo</h5>
+			<div class="dummyimage">Image</div>
+			<p>some random text</p>
+			<h3>some more random text</h3>
+			<div class="dummyimage">Image1</div>
+			<div class="dummyimage">Image2</div>
+			<div class="dummyimage">Image3</div>
+		</div>
 
-			<input type="reset">
-			<br><br>
-		</form>
+		<div class="main">
+			<h2>Main Info</h2>
+			<h5>description</h5>
+			<div class="dummyimage">Image</div>
+			<p>some more text</p>
+			<p>really some more text</p>
+		</div>
+	</div>
 
-		<video width="320" height="240" controls>
-			<source src="mov_bbb.mp4" type="video/mp4">
-		</video>
-	</body>
 </html>
